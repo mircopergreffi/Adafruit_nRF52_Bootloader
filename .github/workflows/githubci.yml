@@ -1,12 +1,10 @@
 name: Build
 
 on:
-  pull_request:
+  workflow_dispatch:
   push:
-  repository_dispatch:
-  release:
-    types:
-      - created
+    tags:
+      - "*.*.*"
 
 jobs:
   set-matrix:
